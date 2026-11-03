@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#130f28">
+<meta name="description" content="샘향 ♡ 므우 테일즈런너 가족 모집 페이지 · Blueming 배경음악 · 성인 · 디스코드 필수 · 이벤트와 하코 중심">
+<meta property="og:title" content="샘향 × 므우 | 우리 가족이 되어줄래?">
+<meta property="og:description" content="테일즈런너 성인 가족 모집 · 디스코드 필수 · 이벤트 & 하코 · Blueming BGM">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/saemhyang.png">
+<title>샘향 × 므우 ♡ 우리 가족이 되어줄래?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#120f24;--bg2:#1e1537;--panel:#201737cc;--panel-solid:#21183f;--line:#ffffff20;
+  --text:#fffaff;--muted:#d4cbe8;--pink:#ff9ecf;--pink2:#ff79b6;--lav:#bda8ff;--lav2:#8d79ff;
+  --blue:#8ce0ff;--gold:#ffe7aa;--good:#a8ffd7;--shadow:0 25px 80px rgba(0,0,0,.38);--radius:30px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Gowun Dodum','DM Sans',sans-serif;color:var(--text);background:
+radial-gradient(circle at 10% 10%,rgba(213,114,255,.22),transparent 30%),
+radial-gradient(circle at 88% 18%,rgba(120,173,255,.18),transparent 28%),
+radial-gradient(circle at 55% 75%,rgba(255,131,196,.14),transparent 25%),
+linear-gradient(180deg,#120f24,#17112e 30%,#110d22 100%);
+overflow-x:hidden;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");opacity:.25;z-index:-2}
+a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button{cursor:pointer}
+::selection{background:#f7a9d3;color:#2a1434}
+.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+.moon-aura,.moon-aura2{position:fixed;border-radius:50%;filter:blur(110px);pointer-events:none;z-index:-1;opacity:.35}
+.moon-aura{width:420px;height:420px;background:#9f6eff;top:-140px;left:-120px}
+.moon-aura2{width:500px;height:500px;background:#ff7fc2;bottom:-160px;right:-160px}
+.cursor-glow{position:fixed;width:24px;height:24px;border-radius:50%;pointer-events:none;z-index:60;background:radial-gradient(circle,#fff 0%,#ffd2ea 28%,rgba(255,255,255,0) 72%);mix-blend-mode:screen;opacity:.8;transform:translate(-50%,-50%);transition:transform .08s linear,opacity .2s}
+#starCanvas{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.7}
+header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(9,7,18,.72),rgba(9,7,18,.15),transparent);backdrop-filter:blur(14px)}
+nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-family:'Jua',sans-serif;font-size:25px}.brand .logo{width:44px;height:44px;border-radius:16px;background:linear-gradient(135deg,#fff,#eab7ff 45%,#95cbff);display:grid;place-items:center;color:#241532;box-shadow:0 8px 26px rgba(255,186,230,.3)}
+.nav-links{display:flex;gap:22px;align-items:center;font-size:14px;color:#e6dbfb}.nav-links a{opacity:.88}.nav-links a:hover{opacity:1;color:#ffd5ea}
+.btn,.ghost{border:none;border-radius:999px;padding:14px 22px;display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;transition:.28s transform,.28s box-shadow,.28s background}.btn{background:linear-gradient(120deg,#ffafd9,#b3b3ff 68%,#b7f0ff);color:#2d1836;box-shadow:0 12px 32px rgba(255,161,209,.27)}.btn:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(255,161,209,.35)}.ghost{background:#ffffff10;color:#fff;border:1px solid #ffffff25}.ghost:hover{background:#ffffff19;transform:translateY(-3px)}
+.mobile-menu{display:none}
+.hero{position:relative;min-height:860px;padding:30px 0 80px;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(255,255,255,.08),transparent 30%),linear-gradient(180deg,transparent 70%,#120f24);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:20px;position:relative;z-index:2}
+.eyebrow{display:flex;align-items:center;gap:10px;letter-spacing:3px;color:#ffcae4;font:800 12px 'DM Sans',sans-serif;text-transform:uppercase}.eyebrow::before{content:'';width:28px;height:1px;background:#ffcae4}
+.hero h1{font-family:'Jua',sans-serif;font-weight:400;font-size:clamp(58px,8vw,112px);line-height:1.02;margin:22px 0 22px;letter-spacing:-3px}.grad{background:linear-gradient(120deg,#fff4c7,#ffb8dc 28%,#c6b7ff 64%,#9ee8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:17px;line-height:1.95;color:var(--muted);max-width:510px}.hero p strong{color:#fff}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.tag-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.tag{padding:9px 13px;border-radius:999px;background:#ffffff10;border:1px solid #ffffff1b;font-size:12px;color:#efe7ff}
+.stage{min-height:660px;position:relative;display:grid;place-items:center;isolation:isolate}
+.portal{width:min(630px,95%);aspect-ratio:1/1;position:relative;display:grid;place-items:center}
+.portal-ring,.portal-ring2,.portal-ring3{position:absolute;inset:8%;border-radius:50%;border:1px solid rgba(255,255,255,.18)}
+.portal-ring{box-shadow:0 0 0 12px rgba(255,255,255,.03),0 0 80px rgba(201,133,255,.22);animation:spin 18s linear infinite}
+.portal-ring2{inset:17%;border-style:dashed;animation:spinReverse 28s linear infinite}
+.portal-ring3{inset:28%;border-color:rgba(255,223,181,.22);box-shadow:0 0 24px rgba(255,223,181,.12) inset;animation:pulse 4.5s ease-in-out infinite}
+.sigils{position:absolute;inset:0;display:grid;place-items:center;font-size:min(45vw,280px);color:#ffffff08;letter-spacing:.15em;transform:rotate(-8deg)}
+.spark{position:absolute;font-size:20px;color:#ffe8aa;animation:float 4s ease-in-out infinite}.spark.s1{left:10%;top:16%}.spark.s2{right:12%;top:24%;animation-delay:.8s}.spark.s3{left:18%;bottom:18%;animation-delay:1.4s}.spark.s4{right:10%;bottom:12%;animation-delay:2.1s}
+.avatar-card{position:absolute;display:flex;flex-direction:column;align-items:center;gap:10px;width:240px;transition:.45s transform}.avatar-card:hover{transform:translateY(-12px) scale(1.02)}
+.avatar-card.left{left:6%;top:8%;transform:rotate(-9deg)}.avatar-card.right{right:5%;bottom:10%;transform:rotate(8deg)}
+.frame{position:relative;width:240px;height:365px;border-radius:140px 140px 90px 90px;padding:10px;background:linear-gradient(135deg,rgba(255,255,255,.36),rgba(255,255,255,.08));box-shadow:0 28px 65px rgba(0,0,0,.45)}
+.frame::before{content:'';position:absolute;inset:-7px;border-radius:inherit;border:1px solid rgba(255,255,255,.16);box-shadow:0 0 35px rgba(255,176,218,.2)}
+.frame img{width:100%;height:100%;object-fit:cover;border-radius:130px 130px 82px 82px;display:block}
+.ribbon{padding:9px 16px;border-radius:999px;background:rgba(12,10,24,.75);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(10px);font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.24)}
+.center-core{position:relative;z-index:2;width:250px;height:250px;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle,#ffd5ef 0%,#cfb9ff 25%,#7a63d3 50%,rgba(28,17,56,.08) 71%,rgba(255,255,255,0) 74%);filter:drop-shadow(0 0 45px rgba(255,179,220,.38))}
+.center-core .heart{font-size:72px;animation:pulse 2.5s ease-in-out infinite}.center-core .sub{position:absolute;bottom:52px;font-size:13px;letter-spacing:2.6px;color:#f6ebff;text-transform:uppercase;text-align:center}
+.notice-float{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:2px;color:#aea0c7}
+.section{padding:100px 0}.section-head{text-align:center;max-width:760px;margin:0 auto 48px}.overline{display:inline-block;color:#d8c1ff;font-weight:800;font-size:12px;letter-spacing:3px}.section-head h2{font-family:'Jua',sans-serif;font-weight:400;font-size:clamp(36px,4.7vw,60px);line-height:1.2;margin:12px 0 10px}.section-head p{font-size:15px;line-height:1.9;color:var(--muted)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:26px}.glass{background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1px solid var(--line);backdrop-filter:blur(16px);box-shadow:var(--shadow);border-radius:var(--radius)}
+.profile{padding:28px;display:flex;gap:24px;align-items:center;position:relative;overflow:hidden;transition:.3s}.profile:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.32)}.profile::after{content:'✧';position:absolute;right:-10px;bottom:-70px;font-size:250px;color:rgba(255,255,255,.05)}
+.profile img{width:180px;height:255px;object-fit:cover;border-radius:110px 110px 80px 80px;border:2px solid rgba(255,255,255,.33);box-shadow:0 15px 40px rgba(0,0,0,.32)}
+.role{font-size:11px;letter-spacing:2.5px;color:#ffd0ea;font-weight:800}.profile h3{font-family:'Jua',sans-serif;font-weight:400;font-size:40px;margin:10px 0 6px}.muted{color:var(--muted)}.chip{display:inline-flex;padding:8px 12px;border-radius:999px;background:#ffffff10;border:1px solid #ffffff20;font-size:12px;font-weight:700;margin-top:15px}.profile p{font-size:14px;line-height:1.9;color:#ddd2ee;margin-top:18px}
+.require-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.req{padding:26px;position:relative;transition:.3s}.req:hover{transform:translateY(-5px);background:linear-gradient(145deg,rgba(255,255,255,.15),rgba(255,255,255,.06));border-color:rgba(255,255,255,.32)}.req .icon{width:56px;height:56px;display:grid;place-items:center;border-radius:18px;background:linear-gradient(135deg,rgba(255,194,229,.16),rgba(198,182,255,.18));font-size:28px;margin-bottom:16px}.req h3{font-family:'Jua',sans-serif;font-weight:400;font-size:24px;margin:0 0 8px}.req p{font-size:13px;line-height:1.8;color:var(--muted);margin:0}.req b.badge{position:absolute;top:18px;right:18px;font-size:11px;color:#ffe8ac}
+.feature-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{padding:30px}.card h3{font-family:'Jua',sans-serif;font-weight:400;font-size:29px;margin:0 0 12px}.card p{font-size:14px;line-height:1.9;color:var(--muted)}
+.checks{display:grid;gap:12px}.check{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:#ffffff08;cursor:pointer;transition:.2s}.check:hover{background:#ffffff13}.check input{appearance:none;width:20px;height:20px;border:1px solid #d3b8ff;border-radius:6px;position:relative}.check input:checked{background:#ffb2d9;border-color:#ffb2d9}.check input:checked::after{content:'✓';position:absolute;left:4px;top:-1px;color:#241532;font-weight:800}.check small{margin-left:auto;color:#f1d2ff;font-size:11px}
+.meter{height:13px;border-radius:999px;background:#ffffff12;overflow:hidden;margin-top:24px}.bar{height:100%;width:0;background:linear-gradient(90deg,#94deff,#bfaaff,#ffacd9,#fff0ba);transition:width .5s}.big-score{font-family:'Jua',sans-serif;font-size:32px;margin:16px 0 8px;color:#ffd1e6}
+.step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:28px}.step .num{font:800 46px 'DM Sans',sans-serif;color:#e2c2ff}.step h3{font-family:'Jua',sans-serif;font-size:25px;font-weight:400;margin:8px 0}.step p{font-size:14px;line-height:1.85;color:var(--muted)}
+.application{padding:32px}.application h3{font-family:'Jua',sans-serif;font-size:31px;font-weight:400;margin:0 0 10px}.application p{font-size:14px;line-height:1.8;color:var(--muted)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}.field{display:flex;flex-direction:column;gap:10px;font-size:13px;color:#eddff8}.field.wide{grid-column:1 / -1}.field input,.field textarea{width:100%;border:none;outline:none;padding:15px 16px;border-radius:18px;background:#ffffff0f;color:#fff;border:1px solid #ffffff18}.field textarea{min-height:120px;resize:vertical}.field input:focus,.field textarea:focus{border-color:#ffb7df;box-shadow:0 0 0 4px rgba(255,183,223,.12)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}.tiny{font-size:12px;color:#cbbfdf;margin-top:12px;line-height:1.8}
+.gallery-shell{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch}.showcase{padding:16px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;min-height:480px}.showcase::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right,rgba(164,141,255,.18),transparent 30%),radial-gradient(circle at bottom left,rgba(255,160,210,.18),transparent 36%)}
+.big-media{position:relative;z-index:2;width:100%;height:100%;min-height:448px;border-radius:26px;overflow:hidden;border:1px solid rgba(255,255,255,.16)}.big-media img{width:100%;height:100%;object-fit:cover;display:block}
+.big-caption{position:absolute;left:30px;bottom:28px;right:30px;z-index:3;padding:14px 18px;border-radius:18px;background:rgba(9,7,18,.55);backdrop-filter:blur(10px);font-size:14px;border:1px solid rgba(255,255,255,.12)}
+.thumbs{padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px}.thumb{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.15);cursor:pointer;min-height:142px;transition:.25s transform,.25s border-color}.thumb:hover{transform:translateY(-4px);border-color:#ffc1e0}.thumb img{width:100%;height:100%;object-fit:cover;display:block}.thumb span{position:absolute;left:10px;bottom:10px;padding:6px 10px;border-radius:999px;background:rgba(11,8,20,.66);font-size:11px;border:1px solid rgba(255,255,255,.15)}
+.player{position:fixed;right:18px;bottom:18px;z-index:70;width:min(355px,calc(100vw - 24px));background:rgba(10,8,20,.82);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:14px 14px 12px;box-shadow:0 20px 50px rgba(0,0,0,.4)}.player-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.song{display:flex;align-items:center;gap:12px;min-width:0}.disc{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,#ffd6eb,#c2b8ff,#95ddff);display:grid;place-items:center;color:#261735;font-size:22px;box-shadow:0 8px 22px rgba(255,182,220,.25)}.song strong{display:block;font-size:14px}.song span{display:block;font-size:12px;color:#cfc1e6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.player-controls{display:flex;align-items:center;gap:8px}.icon-btn{width:42px;height:42px;border:none;border-radius:14px;background:#ffffff10;color:#fff;display:grid;place-items:center}.icon-btn:hover{background:#ffffff1a}.range-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;margin-top:12px;font-size:12px;color:#ccbde4}.range-row input[type=range]{appearance:none;width:100%;height:6px;border-radius:999px;background:#ffffff18;outline:none}.range-row input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#ffd1e8,#c4b7ff);box-shadow:0 0 0 4px rgba(255,255,255,.08)}
+.small-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.fortune-box{padding:28px}.fortune-box h3{font-family:'Jua',sans-serif;font-size:28px;font-weight:400;margin:0 0 12px}.fortune-box .fortune{min-height:86px;padding:16px 18px;border-radius:18px;background:#ffffff0b;border:1px solid #ffffff14;line-height:1.8;color:#efe7ff}.copy-box{padding:28px}.copy-area{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.copy-chip{padding:10px 14px;border-radius:999px;background:#ffffff10;border:1px solid #ffffff18;font-size:13px}
+.faq{display:grid;gap:14px}.faq details{padding:22px 24px;border-radius:22px;background:#ffffff09;border:1px solid rgba(255,255,255,.14)}.faq summary{cursor:pointer;list-style:none;font-weight:800}.faq summary::-webkit-details-marker{display:none}.faq p{margin:12px 0 0;color:var(--muted);line-height:1.9;font-size:14px}
+.end-card{padding:64px 30px;text-align:center;position:relative;overflow:hidden}.end-card::before{content:'';position:absolute;inset:auto 50% -120px auto;transform:translateX(50%);width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,190,227,.22),transparent 70%)}.end-card h2{font-family:'Jua',sans-serif;font-size:clamp(38px,5vw,64px);font-weight:400;line-height:1.2;margin:0 0 16px}.end-card p{color:var(--muted);line-height:1.9;font-size:15px;max-width:560px;margin:0 auto 26px}
+footer{padding:40px 20px 80px;text-align:center;color:#a79aba;font-size:12px;line-height:1.9}
+.top-btn{position:fixed;right:20px;bottom:165px;width:50px;height:50px;border:none;border-radius:16px;background:#ffffff14;color:#fff;backdrop-filter:blur(12px);display:grid;place-items:center;z-index:60;opacity:0;pointer-events:none;transition:.24s}.top-btn.show{opacity:1;pointer-events:auto}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);padding:14px 18px;border-radius:999px;background:rgba(10,8,20,.9);border:1px solid rgba(255,255,255,.14);color:#fff;z-index:90;opacity:0;pointer-events:none;transition:.28s}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.reveal{opacity:0;transform:translateY(24px);transition:.8s ease}.reveal.visible{opacity:1;transform:none}
+.modal{position:fixed;inset:0;background:rgba(5,4,14,.82);backdrop-filter:blur(8px);display:none;place-items:center;z-index:110;padding:22px}.modal.show{display:grid}.modal-content{width:min(1050px,100%);border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.16);background:#111}.modal-img{display:block;width:100%;max-height:82vh;object-fit:contain;background:#0f0e1b}.modal-tools{position:absolute;top:18px;right:18px;display:flex;gap:10px}.modal-tools button{width:44px;height:44px;border:none;border-radius:14px;background:rgba(255,255,255,.14);color:#fff}
+.confetti{position:fixed;z-index:120;left:0;top:0;pointer-events:none;font-size:22px;animation:burst 1.6s ease-out forwards}
+#entrance{position:fixed;inset:0;z-index:200;background:
+radial-gradient(circle at 50% 35%,rgba(255,255,255,.1),transparent 25%),
+linear-gradient(180deg,#0e0a1d 0%,#120d24 55%,#171233 100%);display:grid;place-items:center;overflow:hidden}
+#entrance.hide{animation:fadeOut .95s ease forwards}
+.entrance-bg{position:absolute;inset:0;overflow:hidden}.entrance-bg i{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff;opacity:.8;animation:twinkle 3.6s ease-in-out infinite}.entrance-bg .beam{position:absolute;inset:auto auto -30% 50%;width:2px;height:70%;background:linear-gradient(180deg,transparent,#ffb0da,#9ddfff,transparent);filter:blur(1px);transform-origin:bottom;opacity:.28;animation:sweep 10s linear infinite}
+.entrance-shell{position:relative;width:min(1060px,calc(100% - 26px));padding:32px 28px;display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center}
+.entrance-left{position:relative;padding:40px 10px}.tiny-over{letter-spacing:4px;color:#ffd3ea;font-size:12px;font-weight:800}.entrance-left h1{font-family:'Jua',sans-serif;font-weight:400;font-size:clamp(54px,8vw,110px);line-height:1.02;margin:18px 0}.entrance-left p{max-width:520px;color:#d7cbea;line-height:1.95;font-size:16px}.entrance-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.entrance-note{margin-top:18px;font-size:12px;color:#bcaed4;line-height:1.8}
+.portal-stage{position:relative;min-height:620px;display:grid;place-items:center}.big-portal{position:relative;width:min(520px,100%);aspect-ratio:1/1;border-radius:50%;display:grid;place-items:center}
+.big-portal::before,.big-portal::after{content:'';position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.16)}.big-portal::before{inset:0;box-shadow:0 0 0 20px rgba(255,255,255,.03),0 0 110px rgba(173,132,255,.24);animation:spin 20s linear infinite}.big-portal::after{inset:10%;border-style:dashed;animation:spinReverse 28s linear infinite}
+.big-core{position:absolute;inset:22%;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#fff3c7 0%,#ffc1df 20%,#b9a8ff 42%,#4f3992 65%,rgba(17,12,31,.15) 78%,rgba(17,12,31,0) 80%);box-shadow:0 0 90px rgba(255,202,231,.42)}
+.big-core .core-heart{font-size:88px;filter:drop-shadow(0 0 18px rgba(255,255,255,.35));animation:pulse 2.3s ease-in-out infinite}
+.big-avatars{position:relative;z-index:2;width:100%;height:100%}.e-shot{position:absolute;width:210px;height:320px;border-radius:120px 120px 74px 74px;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.06));padding:8px;border:1px solid rgba(255,255,255,.2);box-shadow:0 30px 70px rgba(0,0,0,.35)}.e-shot img{width:100%;height:100%;object-fit:cover;border-radius:112px 112px 66px 66px}.e-shot.left{left:-10px;top:44px;transform:rotate(-10deg)}.e-shot.right{right:0;bottom:48px;transform:rotate(10deg)}.e-name{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);padding:8px 14px;border-radius:999px;background:rgba(10,8,20,.72);font-size:13px;border:1px solid rgba(255,255,255,.15)}
+.magic-ui{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:78%;height:78%;pointer-events:none}.magic-ui span{position:absolute;color:#fff7d1;font-size:20px;opacity:.85}.magic-ui span:nth-child(1){left:5%;top:22%}.magic-ui span:nth-child(2){right:7%;top:15%}.magic-ui span:nth-child(3){left:17%;bottom:16%}.magic-ui span:nth-child(4){right:12%;bottom:12%}
+.asa-overlay{position:fixed;inset:0;display:none;place-items:center;z-index:180;background:radial-gradient(circle at center,rgba(255,255,255,.12),rgba(8,6,18,.9));backdrop-filter:blur(10px)}.asa-overlay.show{display:grid;animation:fadeIn .3s ease}.asa-box{width:min(760px,calc(100% - 24px));padding:34px;border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.16);text-align:center;box-shadow:0 30px 90px rgba(0,0,0,.45)}.asa-box h2{font-family:'Jua',sans-serif;font-weight:400;font-size:52px;margin:0 0 10px}.asa-box p{color:#ece1ff;line-height:1.9}.asa-fireworks{position:absolute;inset:0;pointer-events:none}
+@keyframes spin{to{transform:rotate(360deg)}} @keyframes spinReverse{to{transform:rotate(-360deg)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}} @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes twinkle{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:1;transform:scale(1.3)}} @keyframes sweep{0%{transform:translateX(-50%) rotate(-50deg)}100%{transform:translateX(-50%) rotate(310deg)}}
+@keyframes burst{0%{transform:translate(0,0) scale(.6);opacity:0}10%{opacity:1}100%{transform:translate(var(--x),var(--y)) scale(1.2);opacity:0}} @keyframes fadeOut{to{opacity:0;visibility:hidden}} @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@media (max-width:980px){.hero-grid,.feature-grid,.gallery-shell,.entrance-shell{grid-template-columns:1fr}.duo,.require-grid,.step-grid,.small-grid,.mini-grid{grid-template-columns:1fr 1fr}.portal-stage,.stage{min-height:auto}.avatar-card.left,.avatar-card.right{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none}.portal{min-height:620px}.center-core{position:absolute}.showcase{min-height:360px}.nav-links{display:none}.mobile-menu{display:inline-flex}.top-btn{bottom:145px}}
+@media (max-width:760px){.hero{min-height:auto}.hero h1,.entrance-left h1{letter-spacing:-2px}.duo,.require-grid,.step-grid,.small-grid,.mini-grid,.form-grid{grid-template-columns:1fr}.profile{flex-direction:column;text-align:center}.profile img{width:200px;height:280px}.entrance-shell{padding:18px 12px 26px}.entrance-left{padding:8px 4px 0}.portal{min-height:540px}.frame{width:210px;height:320px}.player{right:12px;left:12px;width:auto}.top-btn{right:14px}.avatar-card{width:210px}.big-portal{width:min(420px,100%)}.e-shot{width:160px;height:250px}.e-shot.left{left:0;top:28px}.e-shot.right{right:0;bottom:34px}}
+</style>
+</head>
+<body>
+<canvas id="starCanvas"></canvas>
+<div class="moon-aura"></div><div class="moon-aura2"></div><div class="cursor-glow" id="cursorGlow"></div>
+<div id="entrance" aria-label="시작 화면">
+  <div class="entrance-bg" id="entranceStars"></div>
+  <div class="entrance-shell">
+    <div class="entrance-left">
+      <div class="tiny-over">TALES RUNNER FAMILY RECRUITMENT</div>
+      <h1>와, 이게 뭐야?<br><span class="grad">샘향 × 므우</span><br>우리 가족이 되어줄래?</h1>
+      <p>아이유 <strong>Blueming</strong>과 함께 열리는 신비로운 입장 포털.
+      천사 같은 샘향과 시크한 므우가 함께할 성인 가족을 기다리고 있어.
+      <strong>이벤트 · 하코 · 디스코드 필수 · 사교성 환영</strong> 분위기로 포근하고 오래 갈 인연을 찾는 중이야.</p>
+      <div class="entrance-actions">
+        <button class="btn" id="enterMusic">♫ 음악과 함께 입장</button>
+        <button class="ghost" id="enterSilent">☾ 조용히 입장</button>
+      </div>
+      <div class="entrance-actions" style="margin-top:12px">
+        <button class="ghost" id="peekBtn">✨ 미리 반짝이기</button>
+      </div>
+      <div class="entrance-note">입장 후에도 우측 하단 플레이어에서 음악 ON/OFF, 볼륨 조절, 다시 재생이 가능해. <br>그리고 키보드로 <strong>asa</strong>를 입력하면… 비밀 연출이 열릴지도?</div>
+    </div>
+    <div class="portal-stage">
+      <div class="big-portal">
+        <div class="big-core"><div class="core-heart">♡</div></div>
+        <div class="magic-ui"><span>✦</span><span>✧</span><span>✦</span><span>✧</span></div>
+        <div class="big-avatars">
+          <div class="e-shot left"><img src="assets/saemhyang.png" alt="샘향 캐릭터"><div class="e-name">샘향 · 24 · INTP</div></div>
+          <div class="e-shot right"><img src="assets/meu.png" alt="므우 캐릭터"><div class="e-name">므우 · 22 · INTJ</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#home"><span class="logo">♡</span><span>샘향 × 므우</span></a>
+    <div class="nav-links">
+      <a href="#about">소개</a>
+      <a href="#looking">조건</a>
+      <a href="#magic">신기한 기능</a>
+      <a href="#gallery">갤러리</a>
+      <a href="#apply">지원하기</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <button class="ghost mobile-menu" id="menuBtn">☰</button>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">A ROMANTIC LITTLE UNIVERSE</div>
+        <h1>두 사람의<br><span class="grad">반짝이는 세계에</span><br>놀러 와줘.</h1>
+        <p>우리 둘은 테일즈런너 안에서 <strong>이벤트와 하코를 중심</strong>으로 함께 달리고,
+        편하게 웃고 떠들 수 있는 새로운 가족을 찾고 있어.
+        성인이면서 디스코드 소통이 가능하고, 사교성 좋고, 서로의 텐션을 존중해 줄 사람이라면 너무 좋아.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#apply">💌 가족 지원하기</a>
+          <button class="ghost" id="fortuneBtn">🔮 오늘의 궁합 보기</button>
+        </div>
+        <div class="tag-row">
+          <span class="tag">성인 이상</span><span class="tag">디스코드 필수</span><span class="tag">사교성 중요</span><span class="tag">이벤트 / 하코 선호</span><span class="tag">배려 · 매너</span>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="portal">
+          <div class="portal-ring"></div><div class="portal-ring2"></div><div class="portal-ring3"></div>
+          <div class="sigils">♡</div>
+          <span class="spark s1">✦</span><span class="spark s2">✦</span><span class="spark s3">✧</span><span class="spark s4">✧</span>
+          <div class="avatar-card left"><div class="frame"><img src="assets/saemhyang.png" alt="샘향 캐릭터"></div><div class="ribbon">샘향 · 24 · INTP · 남자</div></div>
+          <div class="center-core"><div class="heart">♡</div><div class="sub">MAGICALLY CONNECTED</div></div>
+          <div class="avatar-card right"><div class="frame"><img src="assets/meu.png" alt="므우 캐릭터"></div><div class="ribbon">므우 · 22 · INTJ · 여자</div></div>
+        </div>
+        <div class="notice-float">SCROLL TO DISCOVER THE MAGIC ↓</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-head reveal"><div class="overline">MEET THE DUO</div><h2>샘향과 므우를 소개할게 ♡</h2><p>하얀 천사 감성의 샘향과, 시크한 블랙캣 무드의 므우.
+      조금 다른 결의 매력을 가진 두 사람이 함께 만드는 포근하고 특별한 공간이야.</p></div>
+      <div class="duo">
+        <article class="glass profile reveal">
+          <img src="assets/saemhyang.png" alt="샘향 캐릭터">
+          <div>
+            <div class="role">DAD · 아빠 포지션</div>
+            <h3>샘향 <span style="color:#ffbadc">✿</span></h3>
+            <div class="muted">24살 · 남자</div>
+            <div class="chip">INTP · 논리술사</div>
+            <p>포근한 흰색 무드처럼 부드럽게 다가가지만, 게임할 때는 은근 집중력 있게 챙겨주는 타입.
+            여유로운 친목과 오래 가는 인연을 좋아해.</p>
+          </div>
+        </article>
+        <article class="glass profile reveal">
+          <img src="assets/meu.png" alt="므우 캐릭터">
+          <div>
+            <div class="role">MOM · 엄마 포지션</div>
+            <h3>므우 <span style="color:#cbb7ff">✦</span></h3>
+            <div class="muted">22살 · 여자</div>
+            <div class="chip">INTJ · 전략가</div>
+            <p>시크하고 감각적인 분위기, 하지만 친해지면 더 따뜻하고 다정한 타입.
+            어색함보다는 진짜 잘 맞는 사람과 오래 함께하는 걸 좋아해.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="looking" style="background:linear-gradient(180deg,transparent,rgba(181,113,230,.06),transparent)">
+    <div class="wrap">
+      <div class="section-head reveal"><div class="overline">OUR WISHLIST</div><h2>이런 가족이면 더 좋아요</h2><p>필수 조건은 분명하지만, 기본적으로는 편하고 배려 있는 사람을 가장 환영해.
+      아래 조건은 분위기를 알려 주기 위한 가이드야.</p></div>
+      <div class="require-grid">
+        <article class="glass req reveal"><b class="badge">필수</b><div class="icon">🔞</div><h3>성인 이상</h3><p>만 19세 이상 성인. 대화와 관계에서 서로를 존중하고 편하게 지낼 수 있는 사람.</p></article>
+        <article class="glass req reveal"><b class="badge">필수</b><div class="icon">🎧</div><h3>디스코드 가능</h3><p>디스코드로 연락이 가능하고, 함께 게임할 때 소통이 원활한 사람.</p></article>
+        <article class="glass req reveal"><b class="badge">필수</b><div class="icon">💬</div><h3>사교성</h3><p>먼저 인사할 줄 알고, 낯을 가려도 친해지려는 마음이 있는 사람.</p></article>
+        <article class="glass req reveal"><b class="badge">선호</b><div class="icon">🏁</div><h3>이벤트·하코 중심</h3><p>이벤트와 하코 채널을 같이 달리면 최고! 공통 플레이가 많을수록 빨리 친해질 수 있어.</p></article>
+        <article class="glass req reveal"><b class="badge">추천</b><div class="icon">🌙</div><h3>텐션 존중</h3><p>무리한 접속 강요 없이 각자 일정과 컨디션을 배려해 주는 사람.</p></article>
+        <article class="glass req reveal"><b class="badge">추천</b><div class="icon">🤍</div><h3>매너 있는 친목</h3><p>분쟁 유도, 과한 눈치 주기, 뒷담화보다는 건강하고 즐거운 친목을 지향하는 사람.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="magic">
+    <div class="wrap">
+      <div class="section-head reveal"><div class="overline">INTERACTIVE MAGIC</div><h2>신기한 기능도 잔뜩 넣었어</h2><p>그냥 소개 페이지가 아니라, 직접 만져보고 놀 수 있는 작은 놀이터처럼 구성했어.</p></div>
+      <div class="feature-grid">
+        <div class="glass card reveal">
+          <h3>우리 가족 적합도 테스트 💘</h3>
+          <p>아래 체크리스트를 눌러서 우리와 얼마나 잘 맞을지 확인해 봐. 점수는 어디로 전송되지 않고 이 브라우저 안에서만 계산돼.</p>
+          <div class="checks" id="checks">
+            <label class="check"><input type="checkbox" data-weight="20"><span>나는 성인이며 성숙하게 소통할 수 있어요</span><small>필수</small></label>
+            <label class="check"><input type="checkbox" data-weight="20"><span>디스코드로 자주 연락할 수 있어요</span><small>필수</small></label>
+            <label class="check"><input type="checkbox" data-weight="20"><span>사교적이고 대화하는 걸 좋아해요</span><small>필수</small></label>
+            <label class="check"><input type="checkbox" data-weight="20"><span>이벤트/하코 위주 플레이를 즐겨요</span><small>선호</small></label>
+            <label class="check"><input type="checkbox" data-weight="10"><span>서로의 시간과 텐션을 존중해요</span><small>추천</small></label>
+            <label class="check"><input type="checkbox" data-weight="10"><span>오래 가는 친목을 원해요</span><small>추천</small></label>
+          </div>
+          <div class="meter"><div class="bar" id="meterBar"></div></div>
+          <div class="big-score" id="matchScore">0% · 설레는 첫 만남</div>
+          <p id="matchMsg">버튼을 눌러 천천히 확인해 봐.</p>
+          <div class="actions"><button class="ghost" id="resetMatch">↺ 다시 선택</button><button class="ghost" id="burstBtn">✨ 반짝이기</button></div>
+        </div>
+        <div class="mini-grid">
+          <div class="glass fortune-box reveal">
+            <h3>오늘의 가족 운세 🔮</h3>
+            <div class="fortune" id="fortuneText">버튼을 누르면 오늘의 한 줄 메시지를 보여줄게.</div>
+            <div class="actions"><button class="btn" id="drawFortune">운세 뽑기</button></div>
+          </div>
+          <div class="glass copy-box reveal">
+            <h3 style="font-family:'Jua',sans-serif;font-weight:400;font-size:28px;margin:0 0 10px">핵심 키워드</h3>
+            <p class="muted" style="line-height:1.8">페이지 분위기를 한눈에 보이게 하는 요약 키워드야.</p>
+            <div class="copy-area">
+              <div class="copy-chip">성인 친목</div><div class="copy-chip">디코 필수</div><div class="copy-chip">이벤트/하코</div><div class="copy-chip">오래 가는 인연</div><div class="copy-chip">다정한 분위기</div><div class="copy-chip">배려와 매너</div>
+            </div>
+            <div class="actions"><button class="ghost" id="copyKeywords">키워드 복사</button></div>
+          </div>
+          <div class="glass card reveal" style="grid-column:1 / -1">
+            <h3>지원 전에 이런 점도 참고해 줘 ✨</h3>
+            <p>① 지나치게 공격적인 분위기보다는 편하고 밝은 무드를 선호해.<br>
+            ② 부담 없는 친목이지만 연락 두절보다는 적당한 소통이 있으면 좋아.<br>
+            ③ 가족이라는 콘셉트인 만큼, 서로 놀릴 땐 재미있게 하더라도 선은 지켜 주면 좋겠어.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <div class="wrap">
+      <div class="section-head reveal"><div class="overline">VISUAL MOMENTS</div><h2>대표 분위기 미리 보기</h2><p>보내준 두 캐릭터 사진을 중심으로, 페이지 전체 무드가 하나의 컨셉처럼 이어지도록 구성했어.</p></div>
+      <div class="gallery-shell">
+        <div class="glass showcase reveal">
+          <div class="big-media"><img id="mainGalleryImg" src="assets/saemhyang.png" alt="대표 이미지"></div>
+          <div class="big-caption" id="mainGalleryCaption">샘향 — 포근한 천사 무드의 메인 비주얼</div>
+        </div>
+        <div class="glass thumbs reveal">
+          <button class="thumb" data-img="assets/saemhyang.png" data-caption="샘향 — 포근한 천사 무드의 메인 비주얼"><img src="assets/saemhyang.png" alt="샘향 썸네일"><span>샘향</span></button>
+          <button class="thumb" data-img="assets/meu.png" data-caption="므우 — 시크한 블랙캣 무드의 메인 비주얼"><img src="assets/meu.png" alt="므우 썸네일"><span>므우</span></button>
+          <button class="thumb" data-img="assets/saemhyang.png" data-caption="샘향 — 흰색 의상과 날개로 완성된 판타지 감성"><img src="assets/saemhyang.png" alt="샘향 썸네일 2"><span>Fantasy White</span></button>
+          <button class="thumb" data-img="assets/meu.png" data-caption="므우 — 달빛 아래 시크한 밤하늘 감성"><img src="assets/meu.png" alt="므우 썸네일 2"><span>Moon Cat</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="apply" style="background:linear-gradient(180deg,transparent,rgba(116,145,255,.06),transparent)">
+    <div class="wrap">
+      <div class="section-head reveal"><div class="overline">JOIN OUR FAMILY</div><h2>가족이 되는 방법 💌</h2><p>복잡한 절차 없이, 짧게 인사하고 같이 놀아보는 것부터 시작하면 돼.</p></div>
+      <div class="step-grid">
+        <article class="glass step reveal"><div class="num">01</div><h3>소개 정리하기</h3><p>닉네임, 나이, MBTI, 주 접속 시간대를 짧게 적어 줘.</p></article>
+        <article class="glass step reveal"><div class="num">02</div><h3>지원 문구 복사</h3><p>아래 폼으로 지원 문구를 자동 생성하고 복사할 수 있어.</p></article>
+        <article class="glass step reveal"><div class="num">03</div><h3>편하게 연락하기</h3><p>복사한 내용을 샘향 또는 므우에게 전달하면 돼. 부담 없이 시작하자!</p></article>
+      </div>
+      <div class="glass application reveal" style="margin-top:22px">
+        <h3>간단 지원서 작성</h3>
+        <p>입력한 정보는 자동 전송되지 않고, 이 페이지 안에서만 복사 문구 생성에 사용돼.</p>
+        <form id="applyForm">
+          <div class="form-grid">
+            <label class="field">테런 닉네임<input id="nickname" required maxlength="25" placeholder="게임 닉네임"></label>
+            <label class="field">나이 (만 나이)<input id="age" required type="number" min="19" max="120" placeholder="예: 22"></label>
+            <label class="field">MBTI (선택)<input id="mbti" maxlength="12" placeholder="예: ENFP"></label>
+            <label class="field">주 접속 시간<input id="playtime" maxlength="60" placeholder="예: 평일 저녁 / 주말 자유"></label>
+            <label class="field wide">자기소개 / 하고 싶은 말<textarea id="intro" maxlength="500" placeholder="예: 이벤트와 하코를 자주 하고, 디코 소통도 편하게 가능해요!"></textarea></label>
+          </div>
+          <div class="actions"><button class="btn" type="submit">📋 지원 문구 복사하기</button><button class="ghost" type="reset">내용 지우기</button></div>
+          <div class="tiny">※ 현재 자동 전송용 디스코드 링크나 계정은 등록되지 않았어. 복사한 내용을 직접 전달해 줘.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal"><div class="overline">FAQ</div><h2>자주 궁금해할 이야기</h2></div>
+      <div class="faq">
+        <details class="reveal"><summary>꼭 이벤트와 하코만 해야 하나요?</summary><p>주로 이벤트와 하코를 선호하지만, 상황에 따라 다른 콘텐츠를 같이 즐길 수도 있어. 핵심은 같이 재미있게 노는 거야.</p></details>
+        <details class="reveal"><summary>낯을 가리는데 지원해도 될까요?</summary><p>물론이야. 다만 친해지려는 의지와 디스코드 소통 의지가 있으면 충분해.</p></details>
+        <details class="reveal"><summary>매일 접속해야 하나요?</summary><p>매일 필수는 아니야. 대신 너무 일방적으로 끊기기보다 서로 일정에 맞춰 꾸준히 소통할 수 있으면 좋아.</p></details>
+        <details class="reveal"><summary>커플 모집인가요, 가족 모집인가요?</summary><p>샘향과 므우 두 사람이 함께 어울릴 성인 자녀, 즉 게임 속 새로운 가족을 모집하는 페이지야.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="glass end-card reveal">
+      <h2>우리가 기다리는 건<br><span class="grad">완벽한 사람</span>이 아니라<br>같이 웃을 사람.</h2>
+      <p>어색한 첫 인사도 괜찮아. 편하게 다가와 줘.<br>한 번의 대화가 오래 가는 추억이 될 수도 있으니까.</p>
+      <a class="btn" href="#apply">💗 지원하러 가기</a>
+    </div>
+  </section>
+</main>
+
+<div class="player" id="playerBox" aria-label="음악 플레이어">
+  <div class="player-top">
+    <div class="song">
+      <div class="disc">♫</div>
+      <div><strong>Blueming</strong><span>IU · 시작 화면과 함께 입장 가능</span></div>
+    </div>
+    <div class="player-controls">
+      <button class="icon-btn" id="toggleMusic" aria-label="음악 재생 또는 일시정지">▶</button>
+      <button class="icon-btn" id="restartMusic" aria-label="처음부터 재생">↺</button>
+    </div>
+  </div>
+  <div class="range-row"><span>🔉</span><input id="volumeSlider" type="range" min="0" max="100" value="18"><span id="volumeLabel">18%</span></div>
+</div>
+<audio id="bgm" src="assets/blueming.mp3" loop preload="auto"></audio>
+<button class="top-btn" id="topBtn" aria-label="맨 위로 이동">↑</button>
+<div class="toast" id="toast"></div>
+<div class="modal" id="imgModal" aria-hidden="true">
+  <img class="modal-img" id="modalImg" src="" alt="확대 이미지">
+  <div class="modal-tools"><button id="prevImg">←</button><button id="nextImg">→</button><button id="closeModal">✕</button></div>
+</div>
+<div class="asa-overlay" id="asaOverlay">
+  <div class="asa-fireworks" id="asaFireworks"></div>
+  <div class="asa-box">
+    <h2>ASA SECRET ✦</h2>
+    <p><strong>샘향 ♡ 므우</strong>의 비밀 연출이 열렸어!<br>이 페이지를 여기까지 눌러보고 찾아준 사람만 볼 수 있는 특별한 이스터에그야.<br>오늘도 예쁘고 즐거운 인연이 가득하길!</p>
+    <div class="actions" style="justify-content:center"><button class="btn" id="closeAsa">반짝이며 닫기</button></div>
+  </div>
+</div>
+<footer>Made with ♡ for <strong>샘향 × 므우</strong> · Tales Runner Family Recruitment<br>© 2026 · Fan-made recruitment page · 캐릭터 이미지 및 게임 관련 권리는 각 원권리자에게 있습니다.</footer>
+
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const toast=(msg)=>{const el=$('#toast');el.textContent=msg;el.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>el.classList.remove('show'),2600)};
+const audio=$('#bgm'), slider=$('#volumeSlider'), volumeLabel=$('#volumeLabel'), musicBtn=$('#toggleMusic');
+const savedVol=localStorage.getItem('family_vol'); const savedMusic=localStorage.getItem('family_music');
+slider.value=savedVol!==null?savedVol:18; audio.volume=slider.value/100; volumeLabel.textContent=slider.value+'%';
+function syncMusicUI(){musicBtn.textContent=audio.paused?'▶':'❚❚'}
+slider.addEventListener('input',()=>{audio.volume=slider.value/100; volumeLabel.textContent=slider.value+'%'; localStorage.setItem('family_vol',slider.value)});
+$('#restartMusic').addEventListener('click',()=>{audio.currentTime=0; audio.play().then(()=>{localStorage.setItem('family_music','on'); syncMusicUI(); toast('처음부터 다시 재생할게 ✨')}).catch(()=>toast('재생하려면 먼저 입장 버튼을 눌러줘!'))});
+musicBtn.addEventListener('click',()=>{if(audio.paused){audio.play().then(()=>{localStorage.setItem('family_music','on'); syncMusicUI(); toast('Blueming 재생 중 ♫')}).catch(()=>toast('브라우저 정책상 먼저 버튼을 눌러 입장해야 해!'))} else {audio.pause(); localStorage.setItem('family_music','off'); syncMusicUI(); toast('음악을 잠시 멈췄어 ☾')}});
+const entrance=$('#entrance'); document.body.style.overflow='hidden';
+function openSite(withMusic){ if(withMusic){audio.play().then(()=>{localStorage.setItem('family_music','on'); syncMusicUI();}).catch(()=>{});} else {audio.pause(); localStorage.setItem('family_music','off'); syncMusicUI();} entrance.classList.add('hide'); document.body.style.overflow=''; celebrate(innerWidth/2,innerHeight/2,42); setTimeout(()=>entrance.remove(),920);}
+$('#enterMusic').addEventListener('click',()=>openSite(true)); $('#enterSilent').addEventListener('click',()=>openSite(false)); $('#peekBtn').addEventListener('click',()=>{celebrate(innerWidth/2,innerHeight/2,34); toast('포털이 반짝였어 ✨')});
+if(savedMusic==='on'){ /* requires gesture, so only remember preference */ }
+
+// Entrance stars
+const estars=$('#entranceStars'); for(let i=0;i<95;i++){const s=document.createElement('i'); s.style.left=Math.random()*100+'%'; s.style.top=Math.random()*100+'%'; s.style.animationDelay=(Math.random()*4)+'s'; s.style.transform=`scale(${.6+Math.random()*1.8})`; estars.appendChild(s);} for(let i=0;i<8;i++){const b=document.createElement('div'); b.className='beam'; b.style.transform=`translateX(-50%) rotate(${i*45}deg)`; estars.appendChild(b);}
+
+// reveal
+let ob=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible'); ob.unobserve(e.target)}})},{threshold:.11}); $$('.reveal').forEach(el=>ob.observe(el));
+
+// top button
+const topBtn=$('#topBtn'); addEventListener('scroll',()=>topBtn.classList.toggle('show',scrollY>540),{passive:true}); topBtn.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+
+// cursor glow
+const glow=$('#cursorGlow'); addEventListener('pointermove',e=>{glow.style.left=e.clientX+'px'; glow.style.top=e.clientY+'px'});
+
+// star canvas
+const canvas=$('#starCanvas'), ctx=canvas.getContext('2d'); let stars=[]; function resize(){canvas.width=innerWidth*devicePixelRatio; canvas.height=innerHeight*devicePixelRatio; canvas.style.width=innerWidth+'px'; canvas.style.height=innerHeight+'px'; ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0); stars=Array.from({length:innerWidth<700?60:110},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.7+.3,a:Math.random(),d:Math.random()*.015+.004,s:Math.random()*.22+.05}));} function draw(){ctx.clearRect(0,0,innerWidth,innerHeight); for(const st of stars){st.a+=st.d; if(st.a>1||st.a<.15) st.d*=-1; st.y-=st.s; if(st.y<-5){st.y=innerHeight+5; st.x=Math.random()*innerWidth;} ctx.beginPath(); ctx.arc(st.x,st.y,st.r,0,Math.PI*2); ctx.fillStyle=`rgba(255,255,255,${st.a})`; ctx.fill();} requestAnimationFrame(draw);} addEventListener('resize',resize); resize(); draw();
+
+// Match score
+const boxes=$$('#checks input'); function updateMatch(){ let sum=boxes.reduce((n,b)=>n+(b.checked?+b.dataset.weight:0),0); $('#meterBar').style.width=sum+'%'; let t='설레는 첫 만남', m='버튼을 눌러 천천히 확인해 봐.'; if(sum>=100){t='운명 같은 가족 후보!'; m='우리랑 너무 잘 맞아. 꼭 인사해 줘!';} else if(sum>=80){t='우리와 꽤 잘 맞는걸?'; m='함께 달리면 정말 재밌을 것 같아.';} else if(sum>=50){t='점점 친해지는 중'; m='공통점이 많네! 조금 더 알아가 보자.';} else if(sum>0){t='좋은 시작이야'; m='아직 더 알아갈 부분이 있어. 천천히 보면 돼.';} $('#matchScore').textContent=sum+'% · '+t; $('#matchMsg').textContent=m;}
+boxes.forEach(b=>b.addEventListener('change',updateMatch)); $('#resetMatch').addEventListener('click',()=>{boxes.forEach(b=>b.checked=false); updateMatch(); toast('테스트를 초기화했어')}); $('#burstBtn').addEventListener('click',()=>celebrate(innerWidth*.5, innerHeight*.45, 26));
+
+// Fortune
+const fortunes=[
+'오늘은 먼저 인사하는 용기가 좋은 인연을 부를지도 몰라.',
+'하코 한 판이 생각보다 크게 친해지는 계기가 될 수 있어.',
+'대화가 잘 통하는 사람은 생각보다 가까운 곳에 있을지도!',
+'오늘의 키워드: 배려 · 텐션 존중 · 소소한 웃음.',
+'편하게 시작한 인사가 오래 가는 가족이 될 수 있어.',
+'지금 이 페이지를 본 것 자체가 운명일지도? ✦'
+];
+$('#drawFortune').addEventListener('click',()=>{const text=fortunes[Math.floor(Math.random()*fortunes.length)]; $('#fortuneText').textContent=text; celebrate(innerWidth*.5, innerHeight*.4, 18)});
+$('#fortuneBtn').addEventListener('click',()=>{document.getElementById('magic').scrollIntoView({behavior:'smooth'}); setTimeout(()=>$('#drawFortune').click(),500)});
+
+// copy keywords
+$('#copyKeywords').addEventListener('click', async()=>{const text='성인 친목 / 디코 필수 / 이벤트·하코 / 오래 가는 인연 / 다정한 분위기 / 배려와 매너'; try{await navigator.clipboard.writeText(text); toast('키워드를 복사했어 ✨')}catch{toast('복사 권한이 없어 수동 복사가 필요해')}});
+
+// gallery
+const galleryItems=$$('.thumb'); const mainImg=$('#mainGalleryImg'), mainCap=$('#mainGalleryCaption'); let currentIdx=0;
+function setGallery(idx){ currentIdx=(idx+galleryItems.length)%galleryItems.length; const item=galleryItems[currentIdx]; mainImg.src=item.dataset.img; mainCap.textContent=item.dataset.caption; }
+galleryItems.forEach((item,idx)=>{ item.addEventListener('click',()=>{setGallery(idx); openModal(idx);}); });
+setGallery(0);
+const modal=$('#imgModal'), modalImg=$('#modalImg'); function openModal(idx){setGallery(idx); modalImg.src=galleryItems[currentIdx].dataset.img; modal.classList.add('show'); modal.setAttribute('aria-hidden','false');}
+function closeModal(){modal.classList.remove('show'); modal.setAttribute('aria-hidden','true');}
+$('#closeModal').addEventListener('click',closeModal); modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+$('#prevImg').addEventListener('click',()=>{setGallery(currentIdx-1); modalImg.src=galleryItems[currentIdx].dataset.img;}); $('#nextImg').addEventListener('click',()=>{setGallery(currentIdx+1); modalImg.src=galleryItems[currentIdx].dataset.img;}); addEventListener('keydown',e=>{if(modal.classList.contains('show')){if(e.key==='Escape') closeModal(); if(e.key==='ArrowLeft') $('#prevImg').click(); if(e.key==='ArrowRight') $('#nextImg').click();}});
+
+// apply form copy
+$('#applyForm').addEventListener('submit', async(e)=>{e.preventDefault(); const nick=$('#nickname').value.trim(), age=Number($('#age').value); if(!nick || !Number.isInteger(age) || age<19){toast('성인 조건과 닉네임을 확인해 줘!'); return;} const message=`[샘향 × 므우 가족 지원]\n테런 닉네임: ${nick}\n나이: 만 ${age}세\nMBTI: ${$('#mbti').value.trim()||'미작성'}\n주 접속 시간: ${$('#playtime').value.trim()||'미작성'}\n자기소개: ${$('#intro').value.trim()||'안녕하세요! 이벤트와 하코를 좋아하고 디코 소통 가능합니다 :)'}\n\n성인 / 디스코드 가능 / 사교적인 분위기 선호`; try{await navigator.clipboard.writeText(message); toast('지원 문구를 복사했어 💌 전달만 하면 돼!'); celebrate(innerWidth*.5, innerHeight*.45, 24);} catch { const ta=document.createElement('textarea'); ta.value=message; document.body.append(ta); ta.select(); const ok=document.execCommand('copy'); ta.remove(); toast(ok?'지원 문구 복사 완료 💌':'복사를 지원하지 않는 브라우저야'); }});
+
+// confetti / easter egg
+function celebrate(x,y,n=20){ const marks=['♥','✦','✧','♡','🌸','💗','✨']; for(let i=0;i<n;i++){ const c=document.createElement('span'); c.className='confetti'; c.textContent=marks[Math.floor(Math.random()*marks.length)]; c.style.left=x+'px'; c.style.top=y+'px'; c.style.setProperty('--x',((Math.random()-.5)*700)+'px'); c.style.setProperty('--y',((Math.random()-.5)*600)+'px'); c.style.color=['#ffb5dc','#fff0b1','#c8b9ff','#97e3ff'][i%4]; document.body.append(c); setTimeout(()=>c.remove(),1600); }}
+let buffer=''; addEventListener('keydown',e=>{ if(e.target.matches('input,textarea')) return; buffer=(buffer+String(e.key).toLowerCase()).slice(-12); if(buffer.endsWith('asa')){ openAsa(); buffer=''; }});
+function openAsa(){ $('#asaOverlay').classList.add('show'); celebrate(innerWidth/2, innerHeight/2, 60); toast('ASA SECRET가 열렸어 ✦'); }
+function closeAsa(){ $('#asaOverlay').classList.remove('show'); celebrate(innerWidth/2, innerHeight/2, 28); }
+$('#closeAsa').addEventListener('click', closeAsa); $('#asaOverlay').addEventListener('click', e=>{ if(e.target.id==='asaOverlay') closeAsa(); });
+
+// mobile menu quick scroll
+$('#menuBtn').addEventListener('click',()=>{const target=prompt('이동할 섹션을 입력해줘: 소개 / 조건 / 신기한 기능 / 갤러리 / 지원 / FAQ'); if(!target) return; const map={'소개':'about','조건':'looking','신기한 기능':'magic','갤러리':'gallery','지원':'apply','FAQ':'faq'}; const id=map[target.trim()]; if(id) document.getElementById(id).scrollIntoView({behavior:'smooth'}); else toast('입력한 섹션을 찾지 못했어');});
+})();
+</script>
+</body>
+</html>
