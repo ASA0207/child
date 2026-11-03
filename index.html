@@ -225,7 +225,7 @@ linear-gradient(180deg,#0e0a1d 0%,#120d24 55%,#171233 100%);display:grid;place-i
         편하게 웃고 떠들 수 있는 새로운 가족을 찾고 있어.
         성인이면서 디스코드 소통이 가능하고, 사교성 좋고, 서로의 텐션을 존중해 줄 사람이라면 너무 좋아.</p>
         <div class="hero-actions">
-          <a class="btn" href="#apply">💌 가족 지원하기</a>
+          <a class="btn" href="https://open.kakao.com/o/g3HOwrVi" target="_blank" rel="noopener noreferrer">💬 오픈채팅으로 가입 지원</a><a class="ghost" href="#apply">💌 지원서 작성하기</a>
           <button class="ghost" id="fortuneBtn">🔮 오늘의 궁합 보기</button>
         </div>
         <div class="tag-row">
@@ -360,8 +360,8 @@ linear-gradient(180deg,#0e0a1d 0%,#120d24 55%,#171233 100%);display:grid;place-i
       <div class="section-head reveal"><div class="overline">JOIN OUR FAMILY</div><h2>가족이 되는 방법 💌</h2><p>복잡한 절차 없이, 짧게 인사하고 같이 놀아보는 것부터 시작하면 돼.</p></div>
       <div class="step-grid">
         <article class="glass step reveal"><div class="num">01</div><h3>소개 정리하기</h3><p>닉네임, 나이, MBTI, 주 접속 시간대를 짧게 적어 줘.</p></article>
-        <article class="glass step reveal"><div class="num">02</div><h3>가볍게 인사하기</h3><p>평소 좋아하는 게임과 하고 싶은 이야기를 들려줘.</p></article>
-        <article class="glass step reveal"><div class="num">03</div><h3>편하게 연락하기</h3><p>복사한 내용을 샘향 또는 므우에게 전달하면 돼. 부담 없이 시작하자!</p></article>
+        <article class="glass step reveal"><div class="num">02</div><h3>가볍게 인사하기</h3><p>지원서를 복사하거나, 오픈채팅에서 편하게 자기소개를 해줘.</p></article>
+        <article class="glass step reveal"><div class="num">03</div><h3>편하게 연락하기</h3><p>가입 오픈채팅에 들어와 복사한 지원서를 보내줘. 부담 없이 시작하자!</p></article>
       </div>
       <div class="glass application reveal" style="margin-top:22px">
         <h3>간단 지원서 작성</h3>
@@ -374,8 +374,8 @@ linear-gradient(180deg,#0e0a1d 0%,#120d24 55%,#171233 100%);display:grid;place-i
             <label class="field">주 접속 시간<input id="playtime" maxlength="60" placeholder="예: 평일 저녁 / 주말 자유"></label>
             <label class="field wide">자기소개 / 하고 싶은 말<textarea id="intro" maxlength="500" placeholder="예: 이벤트와 하코를 자주 하고, 디코 소통도 편하게 가능해요!"></textarea></label>
           </div>
-          <div class="actions"><button class="btn" type="submit">📋 지원 문구 복사하기</button><button class="ghost" type="reset">내용 지우기</button></div>
-          <div class="tiny">지원서 복사 후 게임에서 샘향 또는 므우에게 전해 줘. 지원 내용은 자동 전송되지 않아.</div>
+          <div class="actions"><button class="btn" type="submit">📋 지원 문구 복사하기</button><a class="btn" href="https://open.kakao.com/o/g3HOwrVi" target="_blank" rel="noopener noreferrer">💬 카카오 오픈채팅에서 지원하기</a><button class="ghost" type="reset">내용 지우기</button></div>
+          <div class="tiny">지원 문구를 복사한 뒤 오픈채팅에 붙여넣어 보내줘. 지원 내용은 자동으로 전송되지 않아.</div>
         </form>
       </div>
     </div>
@@ -397,7 +397,7 @@ linear-gradient(180deg,#0e0a1d 0%,#120d24 55%,#171233 100%);display:grid;place-i
     <div class="glass end-card reveal">
       <h2>우리가 기다리는 건<br><span class="grad">완벽한 사람</span>이 아니라<br>같이 웃을 사람.</h2>
       <p>어색한 첫 인사도 괜찮아. 편하게 다가와 줘.<br>한 번의 대화가 오래 가는 추억이 될 수도 있으니까.</p>
-      <a class="btn" href="#apply">💗 지원하러 가기</a>
+      <a class="btn" href="https://open.kakao.com/o/g3HOwrVi" target="_blank" rel="noopener noreferrer">💗 카카오 오픈채팅으로 지원하기</a>
     </div>
   </section>
 </main>
@@ -493,7 +493,7 @@ $('#closeModal').addEventListener('click',closeModal); modal.addEventListener('c
 $('#prevImg').addEventListener('click',()=>{setGallery(currentIdx-1); modalImg.src=galleryItems[currentIdx].dataset.img;}); $('#nextImg').addEventListener('click',()=>{setGallery(currentIdx+1); modalImg.src=galleryItems[currentIdx].dataset.img;}); addEventListener('keydown',e=>{if(modal.classList.contains('show')){if(e.key==='Escape') closeModal(); if(e.key==='ArrowLeft') $('#prevImg').click(); if(e.key==='ArrowRight') $('#nextImg').click();}});
 
 // apply form copy
-$('#applyForm').addEventListener('submit', async(e)=>{e.preventDefault(); const nick=$('#nickname').value.trim(), age=Number($('#age').value); if(!nick || !Number.isInteger(age) || age<19){toast('성인 조건과 닉네임을 확인해 줘!'); return;} const message=`[샘향 × 므우 가족 지원]\n테런 닉네임: ${nick}\n나이: 만 ${age}세\nMBTI: ${$('#mbti').value.trim()||'미작성'}\n주 접속 시간: ${$('#playtime').value.trim()||'미작성'}\n자기소개: ${$('#intro').value.trim()||'안녕하세요! 이벤트와 하코를 좋아하고 디코 소통 가능합니다 :)'}\n\n성인 / 디스코드 가능 / 사교적인 분위기 선호`; try{await navigator.clipboard.writeText(message); toast('지원 문구를 복사했어 💌 전달만 하면 돼!'); celebrate(innerWidth*.5, innerHeight*.45, 24);} catch { const ta=document.createElement('textarea'); ta.value=message; document.body.append(ta); ta.select(); const ok=document.execCommand('copy'); ta.remove(); toast(ok?'지원 문구 복사 완료 💌':'복사를 지원하지 않는 브라우저야'); }});
+$('#applyForm').addEventListener('submit', async(e)=>{e.preventDefault(); const nick=$('#nickname').value.trim(), age=Number($('#age').value); if(!nick || !Number.isInteger(age) || age<19){toast('성인 조건과 닉네임을 확인해 줘!'); return;} const message=`[샘향 × 므우 가족 지원]\n테런 닉네임: ${nick}\n나이: 만 ${age}세\nMBTI: ${$('#mbti').value.trim()||'미작성'}\n주 접속 시간: ${$('#playtime').value.trim()||'미작성'}\n자기소개: ${$('#intro').value.trim()||'안녕하세요! 이벤트와 하코를 좋아하고 디코 소통 가능합니다 :)'}\n\n성인 / 디스코드 가능 / 사교적인 분위기 선호`; try{await navigator.clipboard.writeText(message); toast('지원 문구를 복사했어 💌 오픈채팅에 붙여넣어 보내줘!'); celebrate(innerWidth*.5, innerHeight*.45, 24);} catch { const ta=document.createElement('textarea'); ta.value=message; document.body.append(ta); ta.select(); const ok=document.execCommand('copy'); ta.remove(); toast(ok?'지원 문구 복사 완료 💌':'복사를 지원하지 않는 브라우저야'); }});
 
 // confetti / easter egg
 function celebrate(x,y,n=20){ const marks=['♥','✦','✧','♡','🌸','💗','✨']; for(let i=0;i<n;i++){ const c=document.createElement('span'); c.className='confetti'; c.textContent=marks[Math.floor(Math.random()*marks.length)]; c.style.left=x+'px'; c.style.top=y+'px'; c.style.setProperty('--x',((Math.random()-.5)*700)+'px'); c.style.setProperty('--y',((Math.random()-.5)*600)+'px'); c.style.color=['#ffb5dc','#fff0b1','#c8b9ff','#97e3ff'][i%4]; document.body.append(c); setTimeout(()=>c.remove(),1600); }}
